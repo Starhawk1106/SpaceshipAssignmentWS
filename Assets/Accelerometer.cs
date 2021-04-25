@@ -14,8 +14,8 @@ public class Accelerometer : MonoBehaviour
         // 1) XY plane of the device is mapped onto XZ plane
         // 2) rotated 90 degrees around Y axis
 
-        dir.x = Input.acceleration.y;
-        dir.z = -Input.acceleration.x;
+        dir.x = -Input.acceleration.x;
+        dir.z = -Input.acceleration.y;
 
         // clamp acceleration vector to the unit sphere
         if (dir.sqrMagnitude > 1)  {
